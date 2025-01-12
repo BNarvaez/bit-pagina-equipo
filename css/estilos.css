@@ -57,8 +57,8 @@ ol,ul{
    height: calc(100vh - var(--altura_header));;
 }
 
-.logo a{
-   /* text-transform: uppercase; */
+.logo{
+  
    color: var(--color-blanco);
    font-weight: 800;
    font-size: 25px;
@@ -67,6 +67,8 @@ ol,ul{
 .logo:hover{
    color: var(--color-secundario);
 }
+
+
 
 .list_icon{
    color: var(--color-blanco);
@@ -207,6 +209,101 @@ ol,ul{
 }
 
 
+/* FORMULARIO */
+
+#contacto{
+   padding: 50px 0px;
+   color: var(--color-primario)
+}
+
+#contacto h4{
+   text-align: center;
+   font-size: 25px;
+   margin-bottom: 20px;
+}
+#contacto form{
+   max-width: 80%;
+   margin: 0 auto;
+}
+
+.datos-form{
+   display: flex;
+}
+
+.datos-form div{
+   padding: 10px;
+   flex: 1;
+}
+
+form label{
+   display: block;
+   margin-bottom: 10px;
+}
+
+form input,
+form textarea{
+   background: var(--color-blanco);
+   border-radius: 10px;
+   border: 2px solid var(--color-primario);
+   padding: 10px 5px;
+   outline: 0;
+   color: var(--color-primario);
+   width: 100%;
+}
+
+form input:focus,
+form textarea:focus{
+   border-color: var(--color-secundario);
+   box-shadow: 0 0 0 1px var(--color-secundario);
+}
+
+form input::placeholder,
+form textarea::placeholder{
+   color:var(--color-primario);
+}
+
+.mensaje{
+   display: flex;
+   flex-direction: column;
+   padding: 10px;
+}
+
+.boton-formulario .boton-saber-mas{
+   display: block;
+   border: 1px solid var(--color-primario);
+   color: var(--color-primario);
+   text-align: center;
+   transition: .5s;
+}
+
+.boton-formulario .boton-saber-mas:hover{
+   background:#194973;
+   color: var(--color-blanco);
+
+}
+
+/* FOOTER */
+
+footer{
+   background:var(--color-primario);
+   color: var(--color-blanco);
+   padding: 15px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   flex-wrap: wrap;
+   
+}
+
+footer div{
+   color: var(--color-blanco);
+   font-size: 20px;
+}
+
+div i{
+   margin-left: 10px;
+}
+
 /* RESPONSIVE */
 
 @media screen and (min-width: 769px) {
@@ -232,6 +329,8 @@ ol,ul{
       color: var(--color-secundario);
       
    }
+
+   
 }
 
 @media screen and (max-width: 768px) {
@@ -242,5 +341,11 @@ ol,ul{
 
    .contenido-iconos div{
       border: none;
+   }
+
+   /* FORMULARIO */
+
+   .datos-form{
+      flex-direction: column;
    }
 }
